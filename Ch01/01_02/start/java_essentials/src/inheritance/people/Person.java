@@ -9,6 +9,9 @@ public class Person {
     public Person(){
         System.out.println("In Person default constructor");
     }
+    public Person(String name){
+        System.out.println("In Person second constructor. Name is set");
+    }
 
     public String getName() {
         return name;
