@@ -1,6 +1,6 @@
 package abstraction.shapes;
 
-public class Rectangle {
+public class Rectangle extends Shape {
 
     private double length;
     private double width;
@@ -24,5 +24,10 @@ public class Rectangle {
 
     public void setWidth(double width) {
         this.width = width;
+    }
+
+    @Override
+    double calculateArea() {
+        return length * width;
     }
 }
