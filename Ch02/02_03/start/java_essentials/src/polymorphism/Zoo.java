@@ -18,7 +18,10 @@ public class Zoo {
     }
 
     public static void feed(Animal animal){
-
-
+        if (animal instanceof Dog) {
+            System.out.println("Here is your dog food");
+        } else if (animal instanceof Cat) {
+            System.out.println("Here is your cat food");
+        }
     }
 }
