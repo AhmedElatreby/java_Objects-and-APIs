@@ -18,6 +18,7 @@ public class TestResults {
         grades.put("Salah", 95);
         grades.put("Jason", 63);
 
+
         return grades;
     }
 
@@ -39,6 +40,18 @@ public class TestResults {
     }
 
     public static void main(String[] args) {
+        Map<String, Integer> grade = getOriginalGrades();
+        Map<String, Integer> makeUpGrades = getMakeUpGrades();
+
+        grade.forEach( (student, originalGrade) -> {
+            Integer makeUpGrade = makeUpGrades.get(student);
+            if(makeUpGrade > originalGrade){
+                grade.put(student, makeUpGrade);
+            }
+            System.out.println(student + ": " + grade.get(student));
+        });
+
+        }
+
 
     }
-}
