@@ -12,5 +12,10 @@ public class Iterators {
         fruits.add("banana");
         fruits.add("orange");
         fruits.add("lemon");
+
+        var i = fruits.iterator();
+        while (i.hasNext()){
+            System.out.println(i.next());
+        }
     }
 }
