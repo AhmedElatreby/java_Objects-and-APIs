@@ -7,11 +7,12 @@ import java.util.Scanner;
 
 public class RethrowingExceptions {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
         rethrowException();
     }
 
-    public static void rethrowException() {
+    public static void rethrowException() throws  IOException{
         File file = new File("nonexistent/file.txt");
         try {
             file.createNewFile();
@@ -19,6 +20,6 @@ public class RethrowingExceptions {
             throw new RuntimeException(e);
         }
 
-        //Scanner fileReader = new Scanner(file);
+        Scanner fileReader = new Scanner(file);
     }
 }
