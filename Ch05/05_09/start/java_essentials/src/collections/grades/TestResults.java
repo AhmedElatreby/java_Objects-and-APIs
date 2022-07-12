@@ -40,15 +40,15 @@ public class TestResults {
     }
 
     public static void main(String[] args) {
-        Map<String, Integer> grade = getOriginalGrades();
-        Map<String, Integer> makeUpGrades = getMakeUpGrades();
+        Map<String, Integer> grads = getOriginalGrades();
+        Map<String, Integer> markUpGrades = getMakeUpGrades();
 
-        grade.forEach( (student, originalGrade) -> {
-            Integer makeUpGrade = makeUpGrades.get(student);
-            if(makeUpGrade > originalGrade){
-                grade.put(student, makeUpGrade);
+        grads.forEach((student, originalGrades) -> {
+            Integer markUpGrade = markUpGrades.get(student);
+            if (markUpGrade > originalGrades) {
+                grads.put(student, markUpGrade);
             }
-            System.out.println(student + ": " + grade.get(student));
+            System.out.println(student + " : " + grads.get(student));
         });
 
         }
