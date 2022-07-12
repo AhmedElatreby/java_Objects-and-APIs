@@ -17,10 +17,12 @@ public class FinallyBlock {
                 System.out.println(fileReader.nextDouble());
             }
 
-            fileReader.close();
+
 
         }catch(FileNotFoundException | InputMismatchException e){
             e.printStackTrace();
+        }finally {
+            fileReader.close();
         }
 
     }
