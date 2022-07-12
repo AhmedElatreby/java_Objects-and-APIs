@@ -11,6 +11,15 @@ public class MultipleExceptions {
     public static void main(String[] args) {
 
         File file = new File("files/numbers.txt");
-        Scanner fileReader = new Scanner(file);
+        try {
+            Scanner fileReader = new Scanner(file);
+            while (fileReader.hasNext()){
+                System.out.println(fileReader.nextDouble());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (InputMismatchException e){
+            e.printStackTrace();
+        }
     }
 }

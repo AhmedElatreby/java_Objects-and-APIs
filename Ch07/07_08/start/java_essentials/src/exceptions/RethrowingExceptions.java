@@ -13,7 +13,11 @@ public class RethrowingExceptions {
 
     public static void rethrowException() {
         File file = new File("nonexistent/file.txt");
-        file.createNewFile();
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         //Scanner fileReader = new Scanner(file);
     }

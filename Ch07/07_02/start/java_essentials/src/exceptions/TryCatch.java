@@ -10,7 +10,7 @@ public class TryCatch {
         try{
             file.createNewFile();
         }catch(IOException e){
-            System.out.println("Sorry, an error has occured");
+            System.out.println("Sorry, an error has occurred: " + e.getMessage());
         }
     }
 }
